@@ -17,6 +17,7 @@ for(let i = 0; i < data.length; i++){
             console.log(err.stack)
         } else {
             console.log(res.rows[0]);
+            client.end();
 
             // callback hell untuk insert file lain
             // client.query()
@@ -24,6 +25,3 @@ for(let i = 0; i < data.length; i++){
 
     })
 }
-
-
-client.end();
